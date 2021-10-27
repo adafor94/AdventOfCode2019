@@ -6,7 +6,7 @@ wires = open("input.in", "r").read().strip().split("\n")
 wire0 = wires[0].split(",")
 wire1 = wires[1].split(",")
 
-coordinatesWire0 = {}
+coordinatesWire0, intersections = {}, {}
 x,y = 0,0
 steps = 0
 
@@ -19,7 +19,6 @@ for turn in wire0:
     y += dir[1]
     coordinatesWire0[(x,y)] = steps   
 
-intersections = {}
 x, y = 0,0
 steps = 0
 
